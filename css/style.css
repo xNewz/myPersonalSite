@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:300,400,600");
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header {
+  background-color: #10002b;
+  color: #fff;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+  margin-top: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* display the ul element as a flex container */
+  justify-content: flex-start; /* align the li elements to the left of the ul element */
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #3c096c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #10002b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main section:first-of-type {
+  display: flex; /* display the section as a flex container */
+  flex-wrap: wrap; /* wrap the li elements within the ul element */
+}
+
+main section:first-of-type li {
+  width: 100%; /* width of all li elements within the first section element in the main element to 100%. */
+  margin-bottom: 30px;
+}
+
+main section:first-of-type li h3 {
+  margin-bottom: 10px;
+}
+
+main section:first-of-type li p {
+  margin-bottom: 20px;
+}
+
+main section:first-of-type li a {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+main section:first-of-type p {
+  margin-bottom: 20px;
+}
+
+main section:last-of-type ul {
+  display: flex; /* display the ul element as a flex container */
+  flex-wrap: wrap; /* wrap the li elements within the ul element */
+}
+
+main section:last-of-type li {
+  width: 50%; /* width of all li elements within the last section element in the main element to 50%. */
+}
+
+main section:last-of-type li:nth-of-type(odd) {
+  margin-right: 30px;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container-profile {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex; /* display the container as a flex container */
+  align-items: center;
+  text-align: left;
+}
+
+.container-profile h3 {
+  margin-bottom: 10px;
+}
+
+.container-skills {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid; /* display the container as a grid */
+  grid-template-columns: repeat(3, 1fr); /* display the skills as a three-column grid */
+  justify-items: center; /* align the skills to the center of the grid */
+}
+
+.skill {
+  display: flex; /* display the skill as a flex container */
+  align-items: center;  /* align the skill icon and text to the center of the container */
+  margin: 20px;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+img {
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+iframe {
+  border-radius: 10px;
+  width: 100%; /* width of the iframe element to 100%. */
+  height: 315px;
+}
+
+@media (max-width: 640px) {
+  main section:first-of-type li {  
+    width: 100%; /* width of all li elements within the first section element in the main element to 100%. */
+  }
+
+  main section:last-of-type li {
+    width: 100%; /* width of all li elements within the last section element in the main element to 100%. */
+  }
+
+  main section:last-of-type li:nth-of-type(odd) {
+    margin-right: 0; /* removes the right margin of all odd-numbered li elements within the last section element in the main element. */
+  }
+
+  main section:last-of-type li:nth-of-type(even) {
+    margin-left: 0; /* removes the right margin of all even-numbered li elements within the last section element in the main element. */
+  }
+
+  main section:last-of-type li:nth-of-type(2n) {
+    margin-left: 0; /* removes the left margin of every second li element within the last section element in the main element. */
+  }
+
+  main section:last-of-type li:nth-of-type(2n + 1) {
+    margin-right: 0; /* removes the right margin of every second li element within the last section element in the main element. */
+  }
+
+  .container-profile {
+    display: block; /* display the container as a block element */
+    text-align: center; /* align the text within the container to the center */
+  }
+
+  .container-skills {
+    grid-template-columns: repeat(1, 1fr); /* display the skills as a single column */
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) { /* responsive design for tablet */
+  main section:first-of-type li {
+    width: 50%; /* width of all li elements within the first section element in the main element to 50%. */
+  }
+
+  main section:last-of-type li {
+    width: 50%; /* width of all li elements within the last section element in the main element to 50%. */
+  }
+
+  .container-skills {
+    grid-template-columns: repeat(2, 1fr); /* display the skills as a two columns */
+  }
+}
+
+@media screen and (min-width: 1025px) { /* responsive design for desktop */
+  main section:first-of-type li {
+    width: 33.33%; /* width of all li elements within the first section element in the main element to 33.33%. */
+  }
+
+  main section:last-of-type li {
+    width: 33.33%; /* width of all li elements within the last section element in the main element to 33.33%. */
+  }
+
+  main section:last-of-type li:nth-of-type(odd) {
+    margin-right: 30px; /* adds a right margin of 30px to all odd-numbered li elements within the last section element in the main element. */
+  }
+
+  main section:last-of-type li:nth-of-type(even) {
+    margin-left: 30px; /* adds a left margin of 30px to all even-numbered li elements within the last section element in the main element. */
+  }
+
+  main section:last-of-type li:nth-of-type(2n) {
+    margin-left: 30px; /* adds a left margin of 30px to every second li element within the last section element in the main element. */
+  }
+
+  main section:last-of-type li:nth-of-type(2n + 1) {
+    margin-right: 30px; /* adds a right margin of 30px to every second li element within the last section element in the main element. */
+  }
+}
+
+.footer-grid {
+  display: grid; /* display the footer as a grid */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
